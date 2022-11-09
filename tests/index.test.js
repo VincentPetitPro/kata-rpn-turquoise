@@ -14,3 +14,17 @@ test(" '' should return [] ", (t) => {
 
 	t.end();
 });
+
+test(" '2' should return [2] ", (t) => {
+	// given
+	const input = "2";
+	const awaitedResult = [2];
+
+	// when
+	const result = rpn(input);
+
+	// then
+	t.deepEqual(JSON.stringify(result), JSON.stringify(awaitedResult));
+
+	t.end();
+});

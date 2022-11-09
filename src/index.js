@@ -3,7 +3,12 @@ export function rpn(input) {
 
 	let stack = [];
 
-	if (exp == '') {
+	if (exp == "") {
 		return stack;
+	}
+
+	if (typeof Number.parseInt(exp[0]) === "number") {
+		stack.push(Number.parseInt(exp[0]));
+		console.log(stack);
 	}
 }
